@@ -32,3 +32,12 @@ This image includes Node.js version 16, which allows you to run Node.js applicat
 - Push the image into dockerhub: `docker push my_profile/my_repo:latest`
 
 
+3. Creating docker network  
+`docker network create`
+
+`docker run -dit  --name wordpress_app -e MYSQL_ROOT_PASSWORD=pass -e MYSQL_DATABASE=wordpressdb  -e MYSQL_USER=wordpress  -e MYSQL_PASSWORD=wordpress  --expose 3306 --expose 33060 --network my_network  -v ${PWD}/data:/var/lib/mysql  mysql`
+
+`docker network inspect my_network`  
+
+`docker run -dit --name wordpress-website -e WORDPRESS_DB_HOST=wordpress_app -e WORDPRESS_DB_USER=wordpress -e WORDPRESS_DB_PASSWORD=wordpress -e WORDPRESS_DB_NAME=wordpressdb -v ${PWD}/wp-data:/var/www/html -p 80:80 --network my_network wordpress`
+
