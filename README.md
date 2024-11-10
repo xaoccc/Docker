@@ -1,7 +1,8 @@
 # Docker
 Docker training
 
-1. MyWebsite:  
+1. Run app from existing image
+
 ```docker run -it --name mycontainername -p 8080:8080 -v ${PWD}:/app -w /app node:16 npm run serve```
 
 - Explanation of Each Part
@@ -21,5 +22,13 @@ This means all commands will be executed from within the /app directory inside t
 - `node:16`: Specifies the Docker image to use, in this case, node:16.  
 This image includes Node.js version 16, which allows you to run Node.js applications.  
 - `npm run serve`: Command that will be executed inside the container. `npm run serve` typically starts the application (if your package.json file has a serve script defined, often used with frontend frameworks like Vue.js).
+
+2. Create and publish docker image
+- Create the Dockerfile
+- Build the image: `docker image build -t my-app`  
+- You can see if was created using this command: `docker images`  
+- Create a repository in dockerhub or use existing one
+- Tag (commit) the image: `docker tag my-website my_profile/my_repo:latest`
+- Push the image into dockerhub: `docker push my_profile/my_repo:latest`
 
 
