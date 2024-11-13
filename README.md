@@ -33,7 +33,10 @@ This image includes Node.js version 16, which allows you to run Node.js applicat
 
 
 3. Creating docker network  
-`docker network create`
+`docker network create my_network`  
+If the above command is returning an error: `error during connect...`  
+run this command `docker context use default` and try againg to create a network  
+
 
 `docker run -dit  --name wordpress_app -e MYSQL_ROOT_PASSWORD=pass -e MYSQL_DATABASE=wordpressdb  -e MYSQL_USER=wordpress  -e MYSQL_PASSWORD=wordpress  --expose 3306 --expose 33060 --network my_network  -v ${PWD}/data:/var/lib/mysql  mysql`
 

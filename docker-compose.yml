@@ -1,0 +1,36 @@
+services:
+  wordpress_db:
+    image: mysql:8.0
+    command: '--default-authentication-plugin=mysql_native_password'
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: somewordpress
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+    expose:
+      - "3306"
+      - "33060"
+    networks:
+      - my_network
+  wordpress_site:
+    image: wordpress:latest
+    volumes:
+      - wp_data:/var/www/html
+    ports:
+      - "80:80"
+    restart: always
+    environment:
+      MYSQL_DB_HOST: somewordpress_db
+      MYSQL_DB_NAME: somewordpress
+      MYSQL_DB_USER: somewordpress
+      MYSQL_DB_PASSWORD: somewordpress
+    networks:
+      - my_network
+volumes:
+  db_data:
+  wp_data:
+networks:
+  my_network:
