@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\user\\PycharmProjects\\Docker\\TaskBoardApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CC759849-6C9C-4CF7-94B0-40C679137CCC}|TaskBoard.WebApp\\TaskBoard.WebApp.csproj|c:\\users\\user\\pycharmprojects\\docker\\taskboardapp\\taskboard.webapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CC759849-6C9C-4CF7-94B0-40C679137CCC}|TaskBoard.WebApp\\TaskBoard.WebApp.csproj|solutionrelative:taskboard.webapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC759849-6C9C-4CF7-94B0-40C679137CCC}|TaskBoard.WebApp\\TaskBoard.WebApp.csproj|c:\\users\\user\\pycharmprojects\\docker\\taskboardapp\\taskboard.webapp\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{CC759849-6C9C-4CF7-94B0-40C679137CCC}|TaskBoard.WebApp\\TaskBoard.WebApp.csproj|solutionrelative:taskboard.webapp\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\user\\PycharmProjects\\Docker\\TaskBoardApp\\TaskBoard.WebApp\\appsettings.json",
+              "RelativeDocumentMoniker": "TaskBoard.WebApp\\appsettings.json",
+              "ToolTip": "C:\\Users\\user\\PycharmProjects\\Docker\\TaskBoardApp\\TaskBoard.WebApp\\appsettings.json",
+              "RelativeToolTip": "TaskBoard.WebApp\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-15T11:13:04.897Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Users\\user\\PycharmProjects\\Docker\\TaskBoardApp\\TaskBoard.WebApp\\Dockerfile",
+              "RelativeDocumentMoniker": "TaskBoard.WebApp\\Dockerfile",
+              "ToolTip": "C:\\Users\\user\\PycharmProjects\\Docker\\TaskBoardApp\\TaskBoard.WebApp\\Dockerfile",
+              "RelativeToolTip": "TaskBoard.WebApp\\Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-11-15T09:32:21.544Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
