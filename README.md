@@ -44,3 +44,28 @@ run this command `docker context use default` and try againg to create a network
 
 `docker run -dit --name wordpress-website -e WORDPRESS_DB_HOST=wordpress_app -e WORDPRESS_DB_USER=wordpress -e WORDPRESS_DB_PASSWORD=wordpress -e WORDPRESS_DB_NAME=wordpressdb -v ${PWD}/wp-data:/var/www/html -p 80:80 --network my_network wordpress`
 
+4. Build an image from dockerfile and upload it to Dockerhub  
+`docker build . -f ./TaskBoard.WebApp/Dockerfile -t dockerhub_username/dockerhub_repo`  
+`docker build` - building the image
+`.` - set the working dir
+`-f ./TaskBoard.WebApp/Dockerfile` - path to the Dockerfile
+`-t dockerhub_username/dockerhub_repo` - path to the Dockerhub repository
+
+Docker Cheatsheet:
+`docker build` - build image from dockerfile
+`docker run` - run an existing dockerfile (if not local, it will search from the net)
+`docker network create my_network` - create a network
+`docker network inspect my_network` - view details about the network
+`docker network -ls` - view all networks in the current docker engine
+`-p 1234:1234` - define the port
+`-e SOME_VARIABLE=variable_value` - setup an environment variable (can be set more than one)
+`--network network_name` - setup the network. If no network provided, the container is connected to the default (bridge)
+`-v volume_name:/path` - map a volume to a local path/dir
+`--name container_name` - container name
+`--rm --name container_name` - remove the container if exists and create it again
+`-d` - detached mode
+`-i` - interactive mode
+`-t` - terminal mode
+`-dit` - detached and interactive mode and enter docker's terminal 
+`-p` - if nothing after it, it means password, so password will be required
+
