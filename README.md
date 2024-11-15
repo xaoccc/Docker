@@ -68,4 +68,5 @@ Docker Cheatsheet:
 `-t` - terminal mode
 `-dit` - detached and interactive mode and enter docker's terminal 
 `-p` - if nothing after it, it means password, so password will be required
+`docker network connect network_name container_name` - add container to network
 
