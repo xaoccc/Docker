@@ -1,0 +1,40 @@
+services:
+  reseller-app:
+    image: resellerapp
+    depends_on:
+      - mysql
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/resellerdb?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=my-secret-pw
+    networks:
+      - backend
+
+  mysql:
+    image: mysql:8.0
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: my-secret-pw
+      MYSQL_DATABASE: resellerdb
+      MYSQL_USER: root
+      MYSQL_PASSWORD: userpass
+    volumes:
+      - mysql-data:/var/lib/mysql/
+    networks:
+      - backend
+
+
+networks:
+  backend:
+
+volumes:
+  mysql-data:
+
+
+
+
